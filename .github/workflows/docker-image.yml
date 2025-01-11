@@ -22,7 +22,7 @@ jobs:
     - name: Build and Push Docker Image
       uses: docker/build-push-action@v2
       with:
-        context: ./helloworldapp
-        file: ./helloworldapp/Dockerfile
+        context: ./HelloWorldApp
+        file: ./HelloWorldApp/Dockerfile
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/hello-world-app:latest
