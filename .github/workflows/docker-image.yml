@@ -21,7 +21,7 @@ jobs:
 
     - name: Build Docker Image
       run: |
-        docker build -t hello-world-app .
+        docker build -t hello-world-app -f helloworldapp/Dockerfile .
         docker tag hello-world-app:latest ${{ secrets.DOCKER_USERNAME }}/hello-world-app:latest
 
     - name: Push Docker Image to Docker Hub
